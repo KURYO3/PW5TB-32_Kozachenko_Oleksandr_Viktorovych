@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Електропередача</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="calculators-row">
+        <div class="calc-block">
+            <div class="container">
+                <h1>Порівняння надійності систем</h1>
+                <label for="PL110KVOmegaVal">Частота відмов ПЛ-110 кВ:</label>
+                <input type="number" id="PL110KVOmegaVal">
+                <label for="T110KVOmegaVal">Частота відмов T-110 кВ:</label>
+                <input type="number" id="T110KVOmegaVal">
+                <label for="V110KVOmegaVal">Частота відмов V-110 кВ:</label>
+                <input type="number" id="V110KVOmegaVal">
+                <label for="V10KVOmegaVal">Частота відмов V-10 кВ малооливний:</label>
+                <input type="number" id="V10KVOmegaVal">
+                <label for="tiresOmegaVal">Частота відмов збірних шин 10 кВ (на 1 приєднання):</label>
+                <input type="number" id="tiresOmegaVal">
+                <label for="PL110KVTviVal">Тривалість відновлення ПЛ-110 кВ:</label>
+                <input type="number" id="PL110KVTviVal">
+                <label for="T110KVTviVal">Тривалість відновлення T-110 кВ:</label>
+                <input type="number" id="T110KVTviVal">
+                <label for="V110KVTviVal">Тривалість відновлення V-110 кВ:</label>
+                <input type="number" id="V110KVTviVal">
+                <label for="V10KVTviVal">Тривалість відновлення V-10 кВ:</label>
+                <input type="number" id="V10KVTviVal">
+                <label for="tiresTviVal">Тривалість відновлення збірних шин 10 кВ (на 1 приєднання):</label>
+                <input type="number" id="tiresTviVal">
+                <label for="PlannedKMaxVal">Максимальний коефіцієнт планового простою:</label>
+                <input type="number" id="PlannedKMaxVal">
+
+                <input type="button" id="button__first" value="Обрахувати">
+            </div>
+            <div class="results">
+                <h1>Результати:</h1>
+                <p>Частота відмов одноколової системи: <span id="OmegaSumVal"></span></p>
+                <p>Середня тривалість відновлення: <span id="tvosVal"></span></p>
+                <p>Коефіцієнт аварійного простою одноколової системи: <span id="kaosVal"></span></p>
+                <p>Коефіцієнт планового простою одноколової системи: <span id="kposVal"></span></p>
+                <p>Частота відмов одночасно двох кіл двоколової системи: <span id="DKOmega"></span></p>
+                <p>Частота відмов двоколової системи з урахуванням секційного вимикача: <span id="DSOmega"></span></p>
+            </div>
+        </div>
+
+        <div class="calc-block">
+            <div class="container">
+                <h1>Розрахунок збитків</h1>
+                <label for="ZperAVal">Питомі збитки від аварійних недовідпущень:</label>
+                <input type="number" id="ZperAVal">
+                <label for="ZperPVal">Питомі збитки від планових недовідпущень:</label>
+                <input type="number" id="ZperPVal">
+                <label for="OmegaVal">Частота відмов елемента:</label>
+                <input type="number" id="OmegaVal">
+                <label for="tvVal">Тривалість відновлення елемента:</label>
+                <input type="number" id="tvVal">
+                <label for="kpVal">Коефіцієнт планового простою елемента:</label>
+                <input type="number" id="kpVal">
+                <label for="PmVal">Середня потужність навантаження:</label>
+                <input type="number" id="PmVal">
+                <label for="TmVal">Тривалість використання максимуму навантаження:</label>
+                <input type="number" id="TmVal">
+
+                <input type="button" id="button__second" value="Обрахувати">
+            </div>
+            <div class="results">
+                <h1>Результати:</h1>
+                <p>Математичне сподівання аварійного недовідпущення електроенергії: <span id="WnedaVal"></span></p>
+                <p>Математичне сподівання планового недовідпущення електроенергії: <span id="WnedpVal"></span></p>
+                <p>Математичне сподівання збитків від переривання електропостачання: <span id="ZperVal"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
